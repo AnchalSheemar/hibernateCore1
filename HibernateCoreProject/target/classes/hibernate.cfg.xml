@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>   
+<!DOCTYPE hibernate-configuration PUBLIC   
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">   
+  
+<hibernate-configuration>  
+    <session-factory>  
+     <property name="show_sql">true</property>  <!-- shows sql  query  -->          
+   <!--   <property name="hbm2ddl.auto">create</property> -->  <!-- this is used to create new  table.it creates table name as entity class.and it also drop exist table. --><!-- 
+     <property name="hbm2ddl.auto">update</property> -->    <!-- this is checks for existing table,if table is exist it will create table and  perform operations.it's doesn't create new table -->
+   <!--  <property name="hbm2ddl.auto">none</property>  --> <!-- it's also checks for existing table,if table doesn't exist,it will not create new table but  perform operations. -->
+    <property name="hbm2ddl.auto">create</property> 
+    
+    
+    <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@10.1.50.198:1521:orcl</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>        
+    <property name="connection.username">sh</property>     
+    <property name="connection.password">sh</property>
+	<!-- <mapping class="com.nucleus.entity.Student"/>
+		<mapping class="com.nucleus.entity.Subject"/> -->
+		
+		<mapping class="com.nucleus.entity.Student1"/>
+	
+<!-- 	 	<mapping class="com.nucleus.inheritance.Employee"/>
+			<mapping class="com.nucleus.inheritance.RegularEmployee"/> 
+				 <mapping class="com.nucleus.inheritance.ContractEmployee"/>  -->
+				
+	
+	
+	
+	</session-factory>    
+         
+</hibernate-configuration>
